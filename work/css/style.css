@@ -9,61 +9,58 @@ input, select, button {
   outline: none;
   padding: 0px;
 }
-
-.wrapper {
+.wrapper{
   width: 100%;
   background: #cff1ff;
 }
-
-.inner {
+.inner{
   margin: 0 auto;
   width: 600px;
 }
-
-.content__title {
-  font-size: 18px;
-  color: #000000;
-}
-
-.label__section {
-  margin-top: 25px;
-}
-
-.label__text {
-  font-size: 14px;
-  color: #464646;
-}
-
-.is__flex {
-  display: flex;
-}
-
-.personal__content, .account__content, .contact__content, .subscription__content, .submit__content{
-  margin-top: 50px;
-}
-
-.required {
-  color: #e40000;
-}
-
-.page__title {
+h1{
   padding-top: 60px;
   font-size: 28px;
   text-align: center;
 }
-
-.form__wrap {
+h2{
+  font-size: 24px;
+  text-align: center;
+}
+h3{
+  font-size: 18px;
+  color: #000000;
+}
+.required {
+  color: #e40000;
+}
+.personal p{
+  font-size: 14px;
+  color: #464646;
+}
+.submit p{
+  margin-top: 25px;
+  font-size: 10px;
+}
+label:not(.gender__element){
+  font-size: 14px;
+  color: #464646;
+}
+a{
+  color: #0170bf;
+  text-decoration: none;
+}
+form{
   padding: 50px;
   background: #ecfaff;
   margin-top: 60px;
 }
-
-.form__title {
-  font-size: 24px;
-  text-align: center;
+form>section,form>div{
+  margin-top: 50px;
 }
-
-.input__area {
+.label_section{
+  margin-top: 25px;
+}
+.input__area{
   width: 100%;
   height: 35px;
   margin-top: 6px;
@@ -73,23 +70,17 @@ input, select, button {
   border: 1px solid #d9d9d9;
   background: #fbfbfb;
 }
-
-.input__area:focus {
-  background-color: #fff;
-  border-color: rgba(93, 130, 194, 0.4);
-  box-shadow: 0px 0px 0px 2px rgba(1, 90, 191, 0.1);
+.flex{
+  display: flex;
 }
-
-.select__area, .gender__area {
+.select__unit,.gender__area{
   margin-top: 6px;
 }
-
 .select__unit {
   width: 100%;
   position: relative;
 }
-
-.select__unit:after {
+.select__unit::after{
   content: "";
   position: absolute;
   width: 5px;
@@ -101,22 +92,18 @@ input, select, button {
   border-right: 2px solid #c3c3c3;
   transform: rotate(45deg);
 }
-
 .gender__element {
   margin-left: 10px;
 }
-
 .gender__element:first-child {
   margin-left: 0;
 }
-
-.gender__element span{
+.gender__element span {
   position: relative;
   display: inline-block;
   padding: 3px 3px 3px 20px;
   color: #545658;
 }
-
 .gender__element span:before {
   content: "";
   position: absolute;
@@ -129,25 +116,10 @@ input, select, button {
   border-radius: 50%;
   transform: translateY(-50%);
 }
-
-.gender__content:checked +
-span:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 4px;
-  width: 8px;
-  height: 8px;
-  background-color: #017cbf;
-  border-radius: 50%;
-  transform: translateY(-50%);
-}
-
 .subscription__label {
-  position: relative;
-  padding-left: 25px;
+    position: relative;
+    padding-left: 25px;
 }
-
 .subscription__label:before {
   content: "";
   position: absolute;
@@ -159,21 +131,10 @@ span:after {
   border: 1px solid #d9d9d9;
   background: #ffffff;
 }
-
-.subscription__unit input:checked + .subscription__label:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 6px;
-  width: 6px;
-  height: 13px;
-  margin-top: -11px;
-  border-right: 3px solid #0140bf;
-  border-bottom: 3px solid #0140bf;
-  transform: rotate(45deg);
-}
-
-.btn {
+button{
+  padding: 13px;
+  background: #0170bf;
+  color: #fff;
   cursor: pointer;
   display: inline-block;
   border: 1px solid #d9d9d9;
@@ -185,26 +146,4 @@ span:after {
   transition: 0.3s;
   padding: 13px;
   width: 100%;
-}
-
-.btn__submit {
-  padding: 13px;
-  background: #0170bf;
-  color: #fff;
-}
-
-.btn__submit:active {
-  background: #fff;
-  color: #0170bf;
-  border: 1px solid #d9d9d9;
-}
-
-.other-text {
-  margin-top: 25px;
-  font-size: 10px
-}
-
-.link-color {
-  color: #0170bf;
-  text-decoration: none;
 }
